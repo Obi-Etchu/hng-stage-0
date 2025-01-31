@@ -20,25 +20,16 @@
         }
         .card {
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 320px;
-            
-            
+            width: 400px;
+           
         }
-
-        .card:hover{
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
-        .card:hover {
-            transform: translateX(10px);
-          }
         img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #0073b1;
@@ -53,8 +44,8 @@
         }
         p {
             color: #555;
-            font-size: 14px;
-            margin-bottom: 10px;
+            font-size: 16px;
+            margin-bottom: 12px;
         }
         .social-links a {
             margin: 0 5px;
@@ -64,7 +55,7 @@
         }
         #utc-time {
             font-weight: bold;
-            color:#0073b1 ;
+            color: #e63946;
             margin-top: 10px;
         }
     </style>
@@ -73,15 +64,20 @@
     <div class="card">
         <img src="pfp.jpg" alt="Profile Picture" data-testid="profilePicture">
         <h2 data-testid="fullName">Obi Obi Etchu Jnr</h2>
-        <h3 data-testid="jobTitle">Front-end developer</h3>
-        <p data-testid="shortBio">I'm a passionate developer with a strong interest in both front-end and back-end technologies. I love working with React, Next.js, TypeScript, and Tailwind CSS, always looking for ways to improve my skills. My projects range from stock management systems to fitness trackers and file-sharing apps. Beyond coding, I enjoy exploring tech-related hobbies, experimenting with creative CSS animations, and building sleek UI/UX designs. I’m also a big fan of problem-solving, whether it's debugging a tricky piece of code or figuring out how to make a feature more efficient. Outside of tech, I like music, gaming, and discovering new things that challenge me. Learning excites me, and I'm always ready to take on new challenges to grow as a developer and as a person..</p>
-        <p><strong>Location:</strong> <span data-testid="currentLocation">Buea, Cameroon</span></p>
-        <p><strong>Email:</strong> <span data-testid="emailAddress">obi.junior@icloud.com</span></p>
+        <h3 data-testid="jobTitle">Full-Stack Developer</h3>
+        <p data-testid="shortBio">I am a passionate developer specializing in building scalable web applications with React, Next.js, Node.js, and MongoDB. I have experience in designing intuitive user interfaces and optimizing backend performance for seamless user experiences. I love coding, problem-solving, and collaborating with teams to build impactful software solutions.
+            Outside of tech, I like music, gaming, and discovering new things that challenge me
+        </p>
+        <p><strong>📍Location:</strong> <span data-testid="currentLocation">Buea, Cameroon</span></p>
+        <p><strong>📧 Email:</strong> <span data-testid="emailAddress">obi.junior@icloud.com</span></p>
+       
         <div class="social-links" data-testid="socialLinks">
+           <p><strong><label>🔗 Links</label></strong></p> 
             <a href="https://www.linkedin.com/in/obi-junior-12246a342/" target="_blank">LinkedIn</a>
             <a href="https://github.com/Obi-Etchu" target="_blank">GitHub</a>
         </div>
         <br>
+        <hr>
         <p><strong>Current UTC Time:</strong> <span data-testid="currentTimeUTC" id="utc-time"></span></p>
     </div>
 
