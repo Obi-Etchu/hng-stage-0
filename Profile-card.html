@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+            
+            
+        }
+
+        .card:hover{
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateX(10px);
+          }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0073b1;
+        }
+        h2 {
+            color: #333;
+            margin: 10px 0 5px;
+        }
+        h3 {
+            color: #0073b1;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .social-links a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #0073b1;
+            font-weight: bold;
+        }
+        #utc-time {
+            font-weight: bold;
+            color:#0073b1 ;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="pfp.jpg" alt="Profile Picture" data-testid="profilePicture">
+        <h2 data-testid="fullName">Obi Obi Etchu Jnr</h2>
+        <h3 data-testid="jobTitle">Front-end developer</h3>
+        <p data-testid="shortBio">I am a passionate developer specializing in building scalable web applications with React, Next.js, Node.js, and MongoDB.</p>
+        <p><strong>Location:</strong> <span data-testid="currentLocation">Buea, Cameroon</span></p>
+        <p><strong>Email:</strong> <span data-testid="emailAddress">obi.junior@icloud.com</span></p>
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://www.linkedin.com/in/obi-junior-12246a342/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Obi-Etchu" target="_blank">GitHub</a>
+        </div>
+        <br>
+        <p><strong>Current UTC Time:</strong> <span data-testid="currentTimeUTC" id="utc-time"></span></p>
+    </div>
+
+    <script>
+        function updateUTCTime() {
+            const utcTime = new Date().toUTCString();
+            document.getElementById('utc-time').innerText = utcTime;
+        }
+        updateUTCTime();
+    </script>
+</body>
+</html>
