@@ -55,7 +55,7 @@
         }
         #utc-time {
             font-weight: bold;
-            color: #e63946;
+            color: #0073b1;
             margin-top: 10px;
         }
     </style>
@@ -79,14 +79,15 @@
         <br>
         <hr>
         <p><strong>Current UTC Time:</strong> <span data-testid="currentTimeUTC" id="utc-time"></span></p>
-    </div>
 
-    <script>
-        function updateUTCTime() {
-            const utcTime = new Date().toUTCString();
-            document.getElementById('utc-time').innerText = utcTime;
-        }
-        updateUTCTime();
-    </script>
+        <script>
+            function updateUTCTime() {
+                const utcTime = new Date().toUTCString();
+                document.getElementById('utc-time').innerText = utcTime;
+            }
+        
+            updateUTCTime(); 
+            setInterval(updateUTCTime, 1000); 
+        </script>
 </body>
 </html>
